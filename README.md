@@ -36,3 +36,19 @@ Most important things to keep in mind when developing using git:
 
 More detailed best practices documents can be found [here](https://sethrobertson.github.io/GitBestPractices/)
 and [here](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/best-practices).
+
+### Python Coding Standards
+
+Python code should be written following [PEP008](https://www.python.org/dev/peps/pep-0008/). A good IDE like
+[PyCharm](https://www.jetbrains.com/pycharm/) will highlight issues automatically.
+
+Most important:
+
+* Use four spaces per indentation level - not tabs
+* Use proper [casing for names](https://www.python.org/dev/peps/pep-0008/#prescriptive-naming-conventions)
+* Be consistent in use of single or double quotes for string declarations
+* Keep lines to a reasonable length (79-100 characters per line - exact length TBD)
+* A foolish consistency is the hobgoblin of little minds
+
+If you don't use PyCharm, you can check your code for PEP0008 compliance using [pylint](https://www.pylint.org/).
+
