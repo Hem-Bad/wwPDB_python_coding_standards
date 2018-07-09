@@ -33,6 +33,8 @@ Most important things to keep in mind when developing using git:
 * Create branches for all development
 * Commit frequently
 * Use descriptive commit messages
+* Use pull requests to test code before merging to master repository. See 
+more in [continuous integration](#continuous-integration) section.
 
 More detailed best practices documents can be found [here](https://sethrobertson.github.io/GitBestPractices/)
 and [here](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/best-practices).
