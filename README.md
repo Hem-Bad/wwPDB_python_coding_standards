@@ -84,7 +84,8 @@ or for simple modules, replace the modname folder with
 modname.py
 ```
 
-See more details on project layout [here](http://docs.python-guide.org/en/latest/writing/structure/).
+See more details on project layout [here](http://docs.python-guide.org/en/latest/writing/structure/) 
+or at the [PEP0328](https://www.python.org/dev/peps/pep-0328/) page.
 
 
 ### Unit Testing
