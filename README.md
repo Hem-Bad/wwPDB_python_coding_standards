@@ -58,4 +58,26 @@ Additional considerations:
 Python 3.5 has built-in support for [optional typing](https://docs.python.org/3/library/typing.html).
 Using type annotations is recommended for new code development.
 
+#### Project folder layout
+
+Each git repository should contain one logical unit of related code. This usually means one module
+per repository. Within that repository, some or all of the following files should be present:
+
+```
+README.rst
+LICENSE
+setup.py
+requirements.txt
+modname/__init__.py
+modname/core.py
+modname/helpers.py
+docs/conf.py
+docs/index.md
+tests/test_modname.py
+```
+
+See more details on project layout [here](http://docs.python-guide.org/en/latest/writing/structure/).
+
+
 ### Unit Testing
+
