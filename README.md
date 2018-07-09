@@ -125,3 +125,45 @@ Run it from the root directory:
 python3 tests/test_fizzbuzz.py
 ```
 
+### Continuous Integration
+
+Continuous integration (hereafter referred to as CI) is the process of having all your tests
+ran against your code with every commit. CI ensures that no changes that break the tests
+are introduced into your master branch. This increases code reliability. Furthermore, it will
+ensure that if you accidentally commit broken code without first running the tests that you
+are notified immediately.
+
+The process you should take when developing:
+
+1. Create a new branch for the feature you are developing or issue you are working on. `git checkout -B new_feature`
+ will simultaneously create a new branch and check it out.
+2. Do your development work. (Commit early and often!)
+3. Push your changes.
+4. Create a pull-request from your branch into the master branch - either using the command line or the
+ GitHub web site.
+5. Verify that the pull request passes all the tests, and then merge it into master.
+
+#### Using TravisCI
+
+One provider of CI testing is called TravisCI. This example will use TravisCI to demonstrate CI.
+
+In order for TravisCI to access your projects and test them, you must first authorize it. Go to 
+[TravisCI](https://travis-ci.org/) and sign in (this uses your GitHub identity to sign you on).
+
+Now you must create a `.travis.yml` file to tell TravisCI how to test your project. Here is an example:
+
+```yaml
+language: python
+python:
+  - "2.7"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+# Command to run tests
+script: python tests/test_fizzbuzz.py
+
+```
+
+Note that the tests for 2.7 will fail because Python 2 does not support the type annotations we use. So either
+we need to remove the type annotations, or remove support for Python 2. Therefore CI makes it clear for which versions
+of Python our code has issues. 
