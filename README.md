@@ -90,3 +90,38 @@ or at the [PEP0328](https://www.python.org/dev/peps/pep-0328/) page.
 
 ### Unit Testing
 
+
+#### Overview
+
+Unit testing provides some major benefits over ad-hoc testing:
+
+* Enables you to discover bugs immediately
+* Prevents regressions (when fixing a bug, always create a test for the case that triggered the bug)
+* Improves code quality
+* Facilitates changes and refactoring (you can be confident that you didn't break something during a refactor)
+
+Furthermore, test-driven development (write tests that fail first, then write code until the tests stop failing)
+has additional benefits. The primary one is that TDD guarantees that you write tests for all your code as opposed
+to haphazardly inserting some tests later on, or even worse, writing tests for code that you don't fully understand.
+
+Furthermore, the tests written during TDD serve as additional documentation of the project in that they
+document the specification that the code is written to match.
+
+#### Specifics
+
+Testing in python is usually performed using the standard module `unittest`.
+
+The basic idea is:
+
+* Import unittest
+* Create a class that subclasses the `TestCase` class of the unittest module
+* In that class, define a series of methods that perform the tests against your code
+
+See the example file [here](tests/test_fizzbuzz.py).
+
+Run it from the root directory:
+
+```bash
+python3 tests/test_fizzbuzz.py
+```
+
