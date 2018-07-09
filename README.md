@@ -68,12 +68,18 @@ README.rst
 LICENSE
 setup.py
 requirements.txt
-modname/__init__.py
-modname/core.py
-modname/helpers.py
 docs/conf.py
 docs/index.md
 tests/test_modname.py
+modname/__init__.py
+modname/core.py
+modname/helpers.py
+```
+
+or for simple modules, replace the modname folder with
+
+```
+modname.py
 ```
 
 See more details on project layout [here](http://docs.python-guide.org/en/latest/writing/structure/).
