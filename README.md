@@ -6,7 +6,7 @@ This document intends to document the coding standards and best practices that
 should be employed when developing in Python for wwPDB projects.
 
 In addition, there is a document describing some of the major differences in
-Python 3 and the update process [here](2to3.md).
+Python 3 and the update process [here](docs/2to3.md).
 
 Major foci of this document:
 
