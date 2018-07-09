@@ -47,8 +47,15 @@ Most important:
 * Use four spaces per indentation level - not tabs
 * Use proper [casing for names](https://www.python.org/dev/peps/pep-0008/#prescriptive-naming-conventions)
 * Be consistent in use of single or double quotes for string declarations
+* Document classes, methods, and functions using appropriate [docstrings](https://www.python.org/dev/peps/pep-0257/)
 * Keep lines to a reasonable length (79-100 characters per line - exact length TBD)
 * A foolish consistency is the hobgoblin of little minds
 
 If you don't use PyCharm, you can check your code for PEP0008 compliance using [pylint](https://www.pylint.org/).
 
+Additional considerations:
+
+Python 3.5 has built-in support for [optional typing](https://docs.python.org/3/library/typing.html).
+Using type annotations is recommended for new code development.
+
+### Unit Testing
