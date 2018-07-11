@@ -15,6 +15,7 @@ Major foci of this document:
   * [Project folder layout](#project-folder-layout)
 * [Unit Testing](#unit-testing)
 * [Continuous Integration](#continuous-integration)
+* [Packaging](#packaging)
 
 ### Using Git
 
@@ -161,3 +162,41 @@ we need to remove the type annotations, or remove support for Python 2. Therefor
 of Python our code has issues. 
 
 TravisCI documentation available [here](https://docs.travis-ci.com/user/getting-started/).
+
+### Packaging
+
+Packaging is the process of taking your module and wrapping it into a package that can be installed using
+ pip, either from a package file or from PyPi.
+
+To create the package we will use the build in python3 module `setuptools`. To upload the file to PyPi
+we will use the `twine` module which is available through a `pip install twine`. Why twine rather than
+setuptools for uploading? See [this](https://pypi.org/project/twine/#why-should-i-use-this).
+
+To build a package for your module, you must have a `setup.py` file that contains the metadata about
+your package and information on building it. An example is located in this repo and is called [setup.py](setup.py).
+
+For details on the various keyword parameters, see [here](https://setuptools.readthedocs.io/en/latest/setuptools.html).
+
+For a list of the allowed classifiers for PyPi, see [here](https://pypi.org/pypi?%3Aaction=list_classifiers).
+
+Once you have your setup file ready, you can create a distribution file by running `python3 setup.py sdist`.
+After that command completes successfully, you will have a package file located in the newly created `dist` folder.
+
+If you run that command in this repo, you will wind up with the file  `dist/fizzbuzz-0.1b0.tar.gz` which
+can be installed with  `pip3 install dist/fizzbuzz-0.1b0.tar.gz`.
+
+Finally, do a test upload using twine (you will be prompted for your PyPi username and password):
+
+```
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+
+If that works, you can then proceed to sign it and upload it to the production PyPi:
+
+```python
+twine upload dist/*.tar.gz --sign
+```
+
+If you don't have GPG set up on your machine, you can either omit the `--sign` argument, or ask a
+colleague to create the distribution file and upload it for you. Having signed packages on PyPi shows
+users of your module that it hasn't been tampered with and is highly recommended. 
