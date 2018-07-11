@@ -3,7 +3,7 @@
 from typing import Union
 
 
-def fizzbuzz(number: int) -> Union[str, int]:
+def fizzbuzz(number):
     """ The classic FizzBuzz method.
 
     Returns FizzBuzz, Fizz, Buzz, or the input number for numbers greater than zero.
@@ -16,3 +16,7 @@ def fizzbuzz(number: int) -> Union[str, int]:
         return "Buzz"
     elif number < 0:
         raise ValueError("Cannot FizzBuzz numbers less than 0.")
+
+
+fizzbuzz.__annotations__ = {'number': int, 'return': Union[str, int]}
+
