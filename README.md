@@ -167,3 +167,5 @@ script: python tests/test_fizzbuzz.py
 Note that the tests for 2.7 will fail because Python 2 does not support the type annotations we use. So either
 we need to remove the type annotations, or remove support for Python 2. Therefore CI makes it clear for which versions
 of Python our code has issues. 
+
+TravisCI documentation available [here](https://docs.travis-ci.com/user/getting-started/).
