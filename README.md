@@ -145,6 +145,8 @@ The process you should take when developing:
 
 #### Using TravisCI
 
+[![Build Status](https://travis-ci.org/uwbmrb/wwPDB_python_coding_standards.svg?branch=master)](https://travis-ci.org/uwbmrb/wwPDB_python_coding_standards)
+
 One provider of CI testing is called TravisCI. This example will use TravisCI to demonstrate CI.
 
 In order for TravisCI to access your projects and test them, you must first authorize it. Go to 
