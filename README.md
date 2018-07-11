@@ -12,6 +12,7 @@ Major foci of this document:
 
 * [Using Git](#using-git)
 * [Python Coding Standards](#python-coding-standards)
+  * [Project folder layout](#project-folder-layout)
 * [Unit Testing](#unit-testing)
 * [Continuous Integration](#continuous-integration)
 
