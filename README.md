@@ -160,7 +160,6 @@ python:
   - "2.7"
   - "3.5"
   - "3.6"
-  - "3.7"
 # Command to run tests
 script: python tests/test_fizzbuzz.py
 
