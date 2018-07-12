@@ -168,7 +168,7 @@ TravisCI documentation available [here](https://docs.travis-ci.com/user/getting-
 Packaging is the process of taking your module and wrapping it into a package that can be installed using
  pip, either from a package file or from PyPi.
 
-To create the package we will use the build in python3 module `setuptools`. To upload the file to PyPi
+To create the package we will use the python3 module `setuptools`. To upload the file to PyPi
 we will use the `twine` module which is available through a `pip install twine`. Why twine rather than
 setuptools for uploading? See [this](https://pypi.org/project/twine/#why-should-i-use-this).
 
