@@ -199,4 +199,6 @@ twine upload dist/*.tar.gz --sign
 
 If you don't have GPG set up on your machine, you can either omit the `--sign` argument, or ask a
 colleague to create the distribution file and upload it for you. Having signed packages on PyPi shows
-users of your module that it hasn't been tampered with and is highly recommended. 
+users of your module that it hasn't been tampered with and is highly recommended.
+
+Twine documentation is located [here](https://github.com/pypa/twine).
